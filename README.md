@@ -51,11 +51,11 @@
 
                     # Check for spaces to identify word boundaries
                     if current_Character == ' ':
-                        last_Character_of_Last_Word = sentence[index - 1]  # Last character of the previous word
+                        last_Character_of_Previous_Word = sentence[index - 1]  # Last character of the previous word
                         first_Character_of_Next_Word = sentence[index + 1]  # First character of the next word
 
                         # Check if the last character of the last word matches the first character of the next word
-                        if last_Character_of_Last_Word != first_Character_of_Next_Word:
+                        if last_Character_of_Previous_Word != first_Character_of_Next_Word:
                             return False  # Return False if they do not match
                     
                     index += 1  # Move to the next character
